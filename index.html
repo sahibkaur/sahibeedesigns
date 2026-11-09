@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sahibee Designs</title>
+<meta name="description" content="Sahibee Designs is the portfolio of Sahib Kaur, a UX and product designer. Coming soon.">
+<meta property="og:title" content="Sahibee Designs">
+<meta property="og:description" content="UX and product design by Sahib Kaur. Coming soon.">
+<meta property="og:url" content="https://sahibeedesigns.com/">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;600&family=Shantell+Sans:wght@400&display=swap">
+<style>
+:root{
+  --bg:#FFFFFF;
+  --card:#EFF6F4;
+  --ink:#10292C;
+  --muted:#5E7174;
+  --teal:#005F6B;
+  --gold:#F2C14E;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'Manrope','Helvetica Neue',Arial,sans-serif;
+  --hand:'Shantell Sans','Comic Sans MS',cursive;
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6;display:flex;flex-direction:column;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-block:48px}
+.flight{position:relative;width:min(420px,90vw);aspect-ratio:420/220}
+.flight .path{position:absolute;inset:0;width:100%;height:100%}
+.flight .path path{stroke-dasharray:2 12;animation:dash 6s linear infinite}
+.bee{position:absolute;right:4%;top:6%;width:30%;animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-10px) rotate(-6deg)}}
+@keyframes dash{to{stroke-dashoffset:-140}}
+.hi{font-family:var(--hand);color:var(--teal);font-size:18px;margin-top:20px}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(48px,9vw,104px);line-height:1;letter-spacing:-.03em;margin-top:8px}
+h1 em{color:var(--teal);font-style:italic}
+.tag{display:inline-block;margin-top:18px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.soon{font-family:var(--serif);font-size:clamp(22px,2.6vw,30px);margin-top:36px;max-width:22em;text-wrap:balance}
+.mark{background:linear-gradient(transparent 62%,var(--gold) 62%,var(--gold) 92%,transparent 92%);padding-inline:.06em}
+.note{color:var(--muted);margin-top:10px;max-width:32em}
+footer{text-align:center;font-size:14px;color:var(--muted);padding-block:24px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<main>
+  <div class="flight" aria-hidden="true">
+    <svg class="path" viewBox="0 0 420 220" fill="none"><path d="M10 200 C 80 200, 90 120, 150 130 S 230 210, 270 150 S 280 60, 330 70" stroke="#005F6B" stroke-width="4" stroke-linecap="round"/></svg>
+    <svg class="bee" viewBox="0 0 64 64"><g stroke="#111" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="25" cy="22" rx="7" ry="12" transform="rotate(-25 25 22)" fill="#EFF6F4"/><ellipse cx="36" cy="21" rx="6" ry="11" transform="rotate(18 36 21)" fill="#EFF6F4"/><path d="M12 40 6 42 12 44" fill="none"/><ellipse cx="31" cy="41" rx="19" ry="13" fill="#F2C14E"/><path d="M26 29q-4 12 0 24M36 29q-4 12 0 24" fill="none" stroke-width="3.6"/><circle cx="51" cy="39" r="7" fill="#111"/><path d="M53 33q1-7 7-8M49 32q-1-6 3-9" fill="none"/></g><circle cx="53" cy="38" r="1.6" fill="#fff"/></svg>
+  </div>
+  <p class="hi">hi, I'm Sahib</p>
+  <h1>Sahi<em>bee</em></h1>
+  <span class="tag">Designs</span>
+  <p class="soon">The hive is <span class="mark">under construction.</span></p>
+  <p class="note">A UX and product design portfolio is buzzing in soon, with case studies, doodles and a little bit of play.</p>
+</main>
+<footer>© 2026 Sahibee Designs, by Sahib Kaur</footer>
+</body>
+</html>
