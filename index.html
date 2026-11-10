@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Sahibee Designs</title>
-<meta name="description" content="Sahibee Designs is the portfolio of Sahib Kaur, a UX and product designer. Coming soon.">
+<meta name="robots" content="noai, noimageai">
+<meta name="description" content="Sahibee Designs is the portfolio of Sahib Kaur, a UX and product designer in Chandigarh. Coming soon.">
 <meta property="og:title" content="Sahibee Designs">
 <meta property="og:description" content="UX and product design by Sahib Kaur. Coming soon.">
 <meta property="og:url" content="https://sahibeedesigns.com/">
@@ -16,7 +17,6 @@
 <style>
 :root{
   --bg:#FFFFFF;
-  --card:#EFF6F4;
   --ink:#10292C;
   --muted:#5E7174;
   --teal:#005F6B;
@@ -27,31 +27,48 @@
   color-scheme:light;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6;display:flex;flex-direction:column;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-block:48px}
-.flight{position:relative;width:min(420px,90vw);aspect-ratio:420/220}
-.flight .path{position:absolute;inset:0;width:100%;height:100%}
-.flight .path path{stroke-dasharray:2 12;animation:dash 6s linear infinite}
-.bee{position:absolute;right:4%;top:6%;width:30%;animation:bob 2.4s ease-in-out infinite}
-@keyframes bob{50%{transform:translateY(-10px) rotate(-6deg)}}
-@keyframes dash{to{stroke-dashoffset:-140}}
-.hi{font-family:var(--hand);color:var(--teal);font-size:18px;margin-top:20px}
-h1{font-family:var(--serif);font-weight:400;font-size:clamp(48px,9vw,104px);line-height:1;letter-spacing:-.03em;margin-top:8px}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.5;display:flex;flex-direction:column;height:100vh;height:100svh;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-height:560px){html,body{overflow:hidden}}
+main{flex:1;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+
+/* Illustration: the two flying bees are cut out of the artwork and float on their own */
+/* the jar sits left of the artwork's middle, so nudge it onto the page's centre line */
+.art{position:relative;width:min(400px,82vw,42vh);aspect-ratio:1400/880;transform:translateX(7.5%)}
+.art img{display:block;width:100%;height:auto;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;pointer-events:none}
+.slot{position:absolute;background:var(--bg)}
+.slot.l{left:11.786%;top:13.636%;width:12.857%;height:18.75%}
+.slot.r{left:66.429%;top:47.159%;width:13.214%;height:18.182%}
+.bee{position:absolute;inset:0;overflow:hidden}
+.bee img{position:absolute;max-width:none}
+.slot.l img{width:777.78%;left:-91.667%;top:-72.727%}
+.slot.r img{width:756.757%;left:-502.703%;top:-259.375%}
+.slot.l .bee{animation:hover1 2.6s ease-in-out infinite}
+.slot.r .bee{animation:hover2 3.2s ease-in-out infinite}
+@keyframes hover1{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(2px,-7px) rotate(-4deg)}}
+@keyframes hover2{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(-3px,-6px) rotate(3deg)}}
+
+.hi{font-family:var(--hand);color:var(--teal);font-size:17px;margin-top:clamp(12px,3vh,28px)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(44px,min(8vw,10vh),92px);line-height:1;letter-spacing:-.03em;margin-top:4px}
 h1 em{color:var(--teal);font-style:italic}
-.tag{display:inline-block;margin-top:18px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-.soon{font-family:var(--serif);font-size:clamp(22px,2.6vw,30px);margin-top:36px;max-width:22em;text-wrap:balance}
+.tag{display:inline-block;margin-top:12px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.soon{font-family:var(--serif);font-size:clamp(20px,min(2.4vw,3.2vh),28px);margin-top:clamp(14px,3.4vh,32px);max-width:22em;text-wrap:balance}
 .mark{background:linear-gradient(transparent 62%,var(--gold) 62%,var(--gold) 92%,transparent 92%);padding-inline:.06em}
-.note{color:var(--muted);margin-top:10px;max-width:32em}
-footer{text-align:center;font-size:14px;color:var(--muted);padding-block:24px}
+.note{color:var(--muted);margin-top:8px;max-width:32em}
+footer{text-align:center;font-size:14px;color:var(--muted);padding-top:12px;padding-bottom:max(16px,env(safe-area-inset-bottom,0px))}
+main{padding-top:max(12px,env(safe-area-inset-top,0px))}
+@media (max-width:600px){
+  .note{font-size:15px}
+  footer{font-size:13px}
+}
 @media (prefers-reduced-motion:reduce){*{animation:none!important}}
 </style>
 </head>
 <body>
 <main>
-  <div class="flight" aria-hidden="true">
-    <svg class="path" viewBox="0 0 420 220" fill="none"><path d="M10 200 C 80 200, 90 120, 150 130 S 230 210, 270 150 S 280 60, 330 70" stroke="#005F6B" stroke-width="4" stroke-linecap="round"/></svg>
-    <svg class="bee" viewBox="0 0 64 64"><g stroke="#111" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="25" cy="22" rx="7" ry="12" transform="rotate(-25 25 22)" fill="#EFF6F4"/><ellipse cx="36" cy="21" rx="6" ry="11" transform="rotate(18 36 21)" fill="#EFF6F4"/><path d="M12 40 6 42 12 44" fill="none"/><ellipse cx="31" cy="41" rx="19" ry="13" fill="#F2C14E"/><path d="M26 29q-4 12 0 24M36 29q-4 12 0 24" fill="none" stroke-width="3.6"/><circle cx="51" cy="39" r="7" fill="#111"/><path d="M53 33q1-7 7-8M49 32q-1-6 3-9" fill="none"/></g><circle cx="53" cy="38" r="1.6" fill="#fff"/></svg>
+  <div class="art">
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/208dfc106276529.5f8c8f9f82d22.png" alt="Beebeeyian, an illustration by Sahib Kaur of bees flying around a honey jar" width="1400" height="880" draggable="false" oncontextmenu="return false">
+    <div class="slot l" aria-hidden="true"><div class="bee"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/208dfc106276529.5f8c8f9f82d22.png" alt="" draggable="false"></div></div>
+    <div class="slot r" aria-hidden="true"><div class="bee"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/208dfc106276529.5f8c8f9f82d22.png" alt="" draggable="false"></div></div>
   </div>
   <p class="hi">hi, I'm Sahib</p>
   <h1>Sahi<em>bee</em></h1>
