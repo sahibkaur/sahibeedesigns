@@ -147,17 +147,11 @@ i,em{font-style:normal}
 .wins{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:clamp(48px,6vw,72px);padding-block:28px;border-block:1px solid var(--line)}
 .wins b{display:block;font-size:var(--t-h2);font-weight:700;letter-spacing:-.02em;line-height:1.1;color:var(--teal)}
 .wins span{display:block;font-size:var(--t-small);color:var(--muted);margin-top:8px;max-width:22ch;line-height:1.5}
-.cv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px clamp(32px,5vw,72px);margin-top:clamp(40px,5vw,56px)}
-.cvh{font-size:var(--t-label);font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-.cvh:not(:first-child){margin-top:32px}
-.xp{list-style:none}
-.xp li{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
-.xp .when{font-size:var(--t-small);color:var(--muted);font-variant-numeric:tabular-nums;padding-top:1px}
-.xp .what{font-size:var(--t-small);color:var(--muted);line-height:1.5}
-.xp .what b{display:block;font-size:16px;font-weight:500;color:var(--ink);margin-bottom:2px}
-.cvlink{display:inline-block;margin-top:24px;font-size:var(--t-small);font-weight:500;color:var(--ink)}
-@media (max-width:900px){.wins{grid-template-columns:repeat(2,minmax(0,1fr))}.cv{grid-template-columns:1fr}}
-@media (max-width:520px){.xp li{grid-template-columns:1fr;gap:4px}}
+.cv{display:flex;align-items:flex-end;justify-content:space-between;gap:24px 48px;margin-top:clamp(32px,4vw,48px)}
+.cv p{font-size:var(--t-body);line-height:1.6;color:var(--muted);max-width:40em}
+.cv p b{font-weight:500;color:var(--ink)}
+.cvlink{flex:none;font-size:var(--t-small);font-weight:500;color:var(--ink)}
+@media (max-width:900px){.wins{grid-template-columns:repeat(2,minmax(0,1fr))}.cv{flex-direction:column;align-items:flex-start}}
 
 /* Contact */
 .contact h2{font-size:var(--t-h2);font-weight:700;letter-spacing:-.02em;line-height:1.15;color:var(--ink);max-width:14ch}
@@ -361,28 +355,8 @@ html.is-loading .flight *{animation-play-state:paused}
   </div>
 
   <div class="cv">
-    <div class="cvcol">
-      <h3 class="cvh">Experience</h3>
-      <ol class="xp">
-        <li><span class="when">Sep 2025 – Now</span><span class="what"><b>Senior UI/UX Designer</b>Alkye Technologies</span></li>
-        <li><span class="when">Oct 2022 – Jan 2025</span><span class="what"><b>UI/UX Designer, part-time</b>Ryazio Technologies</span></li>
-        <li><span class="when">Jul 2020 – Sep 2022</span><span class="what"><b>UI/UX Designer</b>Ryazio Technologies</span></li>
-        <li><span class="when">Jul 2019 – Jun 2020</span><span class="what"><b>Junior UI/UX Designer</b>Ryazio Technologies</span></li>
-      </ol>
-    </div>
-    <div class="cvcol">
-      <h3 class="cvh">Giving back</h3>
-      <ol class="xp">
-        <li><span class="when">2024</span><span class="what"><b>SYCI Mentor</b>Khalis Foundation: led design of a Sehaj Path tracking app and mentored a team of three</span></li>
-        <li><span class="when">2019</span><span class="what"><b>Google Season of Docs</b>BRL-CAD: wrote guides on 3D modelling concepts</span></li>
-      </ol>
-      <h3 class="cvh">Education</h3>
-      <ol class="xp">
-        <li><span class="when">2022 – 2024</span><span class="what"><b>Master of Computer Applications</b>Panjab University, Chandigarh</span></li>
-        <li><span class="when">2015 – 2018</span><span class="what"><b>BSc, Computer Science</b>Khalsa College for Women, Ludhiana</span></li>
-      </ol>
-      <a class="ln cvlink" href="/assets/sahib-kaur-cv.pdf" download="Sahibpreet-Kaur-CV.pdf">Download the full CV ↓</a>
-    </div>
+    <p>Currently designing at <b>Alkye Technologies</b>. Before that, five years at <b>Ryazio Technologies</b>, where I started as a junior designer. Outside work, I mentored a design team with the <b>Khalis Foundation</b>, and once wrote 3D modelling guides for BRL-CAD through <b>Google Season of Docs</b>.</p>
+    <a class="ln cvlink" href="/assets/sahib-kaur-cv.pdf" download="Sahibpreet-Kaur-CV.pdf">Download the full CV ↓</a>
   </div>
 </section>
 
